@@ -188,7 +188,7 @@ export async function getSheetData(forceRefresh = false): Promise<SheetCache> {
     }
   }
 
-  // Compute standard competition rank (1, 1, 3...)
+  // Official competition rank calculated EXCLUSIVELY from the official Google Sheet
   const sortedTotals = [...parsedScoresRaw]
     .map((s) => s.total)
     .sort((a, b) => b - a);
@@ -227,7 +227,8 @@ export async function getSheetData(forceRefresh = false): Promise<SheetCache> {
     }
   }
 
-  // Authorized test examinee so the project organizer can always test the deployed system
+  // Authorized test examinee for organizer testing.
+  // Note: Appended strictly AFTER official ranks are frozen so it NEVER alters any real examinee's rank.
   const devEmail = "villaflorjames1468@gmail.com";
   const devName = "Villaflor, James G.";
   if (!attendance.some((a) => a.email === devEmail)) {
@@ -283,12 +284,16 @@ export async function findExamineeByEmailAndName(
     data.scores.find((s) => isNameMatch(matchingAttendance.name, s.name)) ??
     null;
 
-  const highestScore = data.scores.reduce((max, s) => (s.total > max ? s.total : max), 0);
+  // Real scored count (excluding organizer test record)
+  const realScores = data.scores.filter(
+    (s) => normalizeName(s.name) !== normalizeName("Villaflor, James G.")
+  );
+  const highestScore = realScores.reduce((max, s) => (s.total > max ? s.total : max), 0);
 
   return {
     attendance: matchingAttendance,
     score: matchingScore,
-    totalScoredExaminees: data.scores.length,
+    totalScoredExaminees: realScores.length,
     highestScore,
   };
 }
