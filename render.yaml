@@ -3,8 +3,8 @@ services:
     name: askbok-score-checker
     runtime: node
     plan: free
-    region: singapore # Closest region to the Philippines
-    buildCommand: npm install && npm run build
+    region: singapore
+    buildCommand: npm install --include=dev && npm run build
     startCommand: npm run start
     autoDeploy: true
     envVars:
