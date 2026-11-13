@@ -28,7 +28,8 @@ export default function HomePage() {
               alt="DOST Batangas"
               width={28}
               height={28}
-              className="h-7 w-auto object-contain"
+              style={{ width: "auto" }}
+              className="h-7 object-contain"
               priority
             />
             <span className="h-4 w-px bg-slate-300" aria-hidden="true" />
@@ -37,7 +38,8 @@ export default function HomePage() {
               alt="ADSS BatStateU Alangilan"
               width={28}
               height={28}
-              className="h-7 w-auto object-contain"
+              style={{ width: "auto" }}
+              className="h-7 object-contain"
               priority
             />
             <span className="h-4 w-px bg-slate-300" aria-hidden="true" />

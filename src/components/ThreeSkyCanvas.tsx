@@ -392,11 +392,11 @@ export default function ThreeSkyCanvas() {
 
     // Animation loop
     let animId = 0;
-    const clock = new THREE.Clock();
+    const startTime = performance.now();
 
     const animate = () => {
       animId = requestAnimationFrame(animate);
-      const time = clock.getElapsedTime();
+      const time = (performance.now() - startTime) * 0.001;
 
       // Smooth camera parallax interpolation
       if (!prefersReducedMotion) {
