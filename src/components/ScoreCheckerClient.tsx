@@ -744,29 +744,56 @@ export default function ScoreCheckerClient() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     {[
-                      { label: "Part I", val: result.score.part1, color: "bg-sky-500" },
-                      { label: "Part II", val: result.score.part2, color: "bg-blue-600" },
-                      { label: "Part III", val: result.score.part3, color: "bg-indigo-600" },
-                    ].map((part) => {
+                      {
+                        part: "Part 1",
+                        subject: "English and Creative Reasoning",
+                        val: result.score.part1,
+                        color: "bg-sky-500",
+                      },
+                      {
+                        part: "Part 2",
+                        subject: "Science",
+                        val: result.score.part2,
+                        color: "bg-blue-600",
+                      },
+                      {
+                        part: "Part 3",
+                        subject: "Mathematics",
+                        val: result.score.part3,
+                        color: "bg-indigo-600",
+                      },
+                    ].map((item) => {
                       const pct = Math.min(
                         100,
-                        Math.round((part.val / Math.max(result.score!.total, 1)) * 100)
+                        Math.round((item.val / Math.max(result.score!.total, 1)) * 100)
                       );
                       return (
                         <div
-                          key={part.label}
-                          className="bg-slate-50/80 rounded-2xl p-4 border border-slate-100 space-y-2"
+                          key={item.part}
+                          className="bg-slate-50/90 rounded-2xl p-4 border border-slate-200/80 flex flex-col justify-between space-y-3 shadow-2xs"
                         >
-                          <div className="flex items-center justify-between text-xs font-bold">
-                            <span className="text-slate-600">{part.label}</span>
-                            <span className="text-slate-400">{pct}%</span>
+                          <div>
+                            <div className="flex items-center justify-between text-xs font-bold mb-1">
+                              <span className="text-sky-700 uppercase tracking-wider text-[11px] font-black">
+                                {item.part}
+                              </span>
+                              <span className="text-slate-500 font-semibold">{pct}%</span>
+                            </div>
+                            <h4 className="text-xs font-extrabold text-slate-800 leading-snug">
+                              {item.subject}
+                            </h4>
                           </div>
-                          <p className="text-3xl font-black text-slate-900">{part.val}</p>
-                          <div className="h-2 w-full rounded-full bg-slate-200 overflow-hidden">
-                            <div
-                              className={`h-full rounded-full transition-all duration-700 ease-out ${part.color}`}
-                              style={{ width: animateBars ? `${pct}%` : "0%" }}
-                            />
+
+                          <div>
+                            <p className="text-3xl font-black text-slate-900 tracking-tight">
+                              {item.val}
+                            </p>
+                            <div className="mt-1.5 h-2 w-full rounded-full bg-slate-200 overflow-hidden">
+                              <div
+                                className={`h-full rounded-full transition-all duration-700 ease-out ${item.color}`}
+                                style={{ width: animateBars ? `${pct}%` : "0%" }}
+                              />
+                            </div>
                           </div>
                         </div>
                       );
