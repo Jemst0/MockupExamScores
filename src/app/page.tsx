@@ -1,8 +1,12 @@
 import Image from "next/image";
 import ScoreCheckerClient from "@/components/ScoreCheckerClient";
 import ThreeSkyCanvas from "@/components/ThreeSkyCanvas";
+import { getSheetData } from "@/lib/sheets";
 
 export default function HomePage() {
+  // Pre-warm the cache in background when page is rendered so data is instant when form is submitted
+  void getSheetData().catch(() => {});
+
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-sky-400 via-sky-200 to-slate-50 relative overflow-x-hidden">
       {/* Interactive 3D WebGL Sky Background (Pencils, Books, Paper Planes, Scholar Stars) */}

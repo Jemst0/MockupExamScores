@@ -58,6 +58,7 @@ export default function ScoreCheckerClient() {
 
   const [devCodeHint, setDevCodeHint] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [loadingMessage, setLoadingMessage] = useState("Sending Verification Code…");
   const [error, setError] = useState<string | null>(null);
   const [fieldErrors, setFieldErrors] = useState<{ email?: string; name?: string; otp?: string }>({});
   const [result, setResult] = useState<ResultPayload | null>(null);
@@ -172,8 +173,13 @@ export default function ScoreCheckerClient() {
     if (!isResend && !validateIdentifyForm()) return;
 
     setLoading(true);
+    setLoadingMessage("Matching registration record…");
     setError(null);
     setDevCodeHint(null);
+
+    const timer = setTimeout(() => {
+      setLoadingMessage("Delivering code to your email inbox…");
+    }, 1200);
 
     try {
       const res = await fetch("/api/auth/request-otp", {
@@ -199,7 +205,9 @@ export default function ScoreCheckerClient() {
     } catch {
       setError("Network error while connecting to the server. Please try again.");
     } finally {
+      clearTimeout(timer);
       setLoading(false);
+      setLoadingMessage("Sending Verification Code…");
     }
   }
 
@@ -496,7 +504,7 @@ export default function ScoreCheckerClient() {
               {loading ? (
                 <>
                   <Loader2 className="h-5 w-5 animate-spin" aria-hidden="true" />
-                  <span>Sending Verification Code…</span>
+                  <span>{loadingMessage}</span>
                 </>
               ) : (
                 <>

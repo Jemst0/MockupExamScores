@@ -26,7 +26,7 @@ const ATTENDANCE_SHEET_URL =
   process.env.ATTENDANCE_SHEET_CSV_URL ||
   "https://docs.google.com/spreadsheets/d/1mX-3DQbcRBMdfmGNUJ9ak521KeQR0DjrRcxcSSyBdXc/export?format=csv&gid=1800691948";
 
-const CACHE_TTL_MS = 60_000; // 1 minute
+const CACHE_TTL_MS = 30 * 60_000; // 30 minutes in-memory cache
 
 interface SheetCache {
   scores: ScoreRecord[];
