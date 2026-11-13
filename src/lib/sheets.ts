@@ -1,3 +1,6 @@
+import defaultScores from "@/data/scores.json";
+import defaultAttendance from "@/data/attendance.json";
+
 export interface ScoreRecord {
   name: string;
   school: string;
@@ -32,6 +35,39 @@ interface SheetCache {
   scores: ScoreRecord[];
   attendance: AttendanceRecord[];
   fetchedAt: number;
+}
+
+function loadBundledData(): SheetCache {
+  const scores: ScoreRecord[] = (defaultScores as ScoreRecord[]).map((s) => ({ ...s }));
+  const attendance: AttendanceRecord[] = (defaultAttendance as AttendanceRecord[]).map((a) => ({ ...a }));
+
+  const devEmail = "villaflorjames1468@gmail.com";
+  const devName = "Villaflor, James G.";
+  if (!attendance.some((a) => a.email === devEmail)) {
+    attendance.push({
+      timestamp: "13/11/2026 14:00:00",
+      email: devEmail,
+      name: devName,
+      sex: "Male",
+      school: "Batangas State University - Alangilan",
+      municipality: "Batangas City",
+      testingHub: "Alangilan - BatStateU Testing Hub (Organizer Test)",
+    });
+  }
+  if (!scores.some((s) => normalizeName(s.name) === normalizeName(devName))) {
+    const sortedTotals = (defaultScores as ScoreRecord[]).map((s) => s.total).sort((a, b) => b - a);
+    scores.push({
+      name: devName,
+      school: "Batangas State University - Alangilan",
+      part1: 42,
+      part2: 55,
+      part3: 51,
+      total: 148,
+      rank: sortedTotals.filter((t) => t > 148).length + 1,
+    });
+  }
+
+  return { scores, attendance, fetchedAt: Date.now() };
 }
 
 let cache: SheetCache | null = null;
@@ -143,118 +179,128 @@ async function fetchCsvText(url: string): Promise<string> {
 }
 
 export async function getSheetData(forceRefresh = false): Promise<SheetCache> {
-  if (!forceRefresh && cache && Date.now() - cache.fetchedAt < CACHE_TTL_MS) {
+  // If cache is not initialized, load immediately from bundled static database snapshot
+  if (!cache) {
+    cache = loadBundledData();
+  }
+
+  // Fast path: Always serve immediately from memory with 0ms latency
+  if (!forceRefresh) {
     return cache;
   }
 
-  const [scoresCsv, attendanceCsv] = await Promise.all([
-    fetchCsvText(SCORES_SHEET_URL),
-    fetchCsvText(ATTENDANCE_SHEET_URL),
-  ]);
+  try {
+    const [scoresCsv, attendanceCsv] = await Promise.all([
+      fetchCsvText(SCORES_SHEET_URL),
+      fetchCsvText(ATTENDANCE_SHEET_URL),
+    ]);
 
-  const scoreRows = parseCsv(scoresCsv);
-  const attendanceRows = parseCsv(attendanceCsv);
+    const scoreRows = parseCsv(scoresCsv);
+    const attendanceRows = parseCsv(attendanceCsv);
 
-  // Parse Scores: Name, School, I, II, III, TOTAL SCORE
-  const parsedScoresRaw: Omit<ScoreRecord, "rank">[] = [];
-  if (scoreRows.length > 1) {
-    const headers = scoreRows[0].map((h) => h.toLowerCase());
-    const nameIdx = headers.findIndex((h) => h.includes("name"));
-    const schoolIdx = headers.findIndex((h) => h.includes("school"));
-    const p1Idx = headers.findIndex((h) => h === "i");
-    const p2Idx = headers.findIndex((h) => h === "ii");
-    const p3Idx = headers.findIndex((h) => h === "iii");
-    const totalIdx = headers.findIndex((h) => h.includes("total"));
+    // Parse Scores: Name, School, I, II, III, TOTAL SCORE
+    const parsedScoresRaw: Omit<ScoreRecord, "rank">[] = [];
+    if (scoreRows.length > 1) {
+      const headers = scoreRows[0].map((h) => h.toLowerCase());
+      const nameIdx = headers.findIndex((h) => h.includes("name"));
+      const schoolIdx = headers.findIndex((h) => h.includes("school"));
+      const p1Idx = headers.findIndex((h) => h === "i");
+      const p2Idx = headers.findIndex((h) => h === "ii");
+      const p3Idx = headers.findIndex((h) => h === "iii");
+      const totalIdx = headers.findIndex((h) => h.includes("total"));
 
-    for (let i = 1; i < scoreRows.length; i++) {
-      const cols = scoreRows[i];
-      const name = cols[nameIdx >= 0 ? nameIdx : 0] ?? "";
-      if (!name) continue;
-      const part1 = Number.parseInt(cols[p1Idx >= 0 ? p1Idx : 2] ?? "0", 10) || 0;
-      const part2 = Number.parseInt(cols[p2Idx >= 0 ? p2Idx : 3] ?? "0", 10) || 0;
-      const part3 = Number.parseInt(cols[p3Idx >= 0 ? p3Idx : 4] ?? "0", 10) || 0;
-      const total =
-        Number.parseInt(cols[totalIdx >= 0 ? totalIdx : 5] ?? "0", 10) ||
-        part1 + part2 + part3;
+      for (let i = 1; i < scoreRows.length; i++) {
+        const cols = scoreRows[i];
+        const name = cols[nameIdx >= 0 ? nameIdx : 0] ?? "";
+        if (!name) continue;
+        const part1 = Number.parseInt(cols[p1Idx >= 0 ? p1Idx : 2] ?? "0", 10) || 0;
+        const part2 = Number.parseInt(cols[p2Idx >= 0 ? p2Idx : 3] ?? "0", 10) || 0;
+        const part3 = Number.parseInt(cols[p3Idx >= 0 ? p3Idx : 4] ?? "0", 10) || 0;
+        const total =
+          Number.parseInt(cols[totalIdx >= 0 ? totalIdx : 5] ?? "0", 10) ||
+          part1 + part2 + part3;
 
-      parsedScoresRaw.push({
-        name,
-        school: cols[schoolIdx >= 0 ? schoolIdx : 1] ?? "",
-        part1,
-        part2,
-        part3,
-        total,
-      });
+        parsedScoresRaw.push({
+          name,
+          school: cols[schoolIdx >= 0 ? schoolIdx : 1] ?? "",
+          part1,
+          part2,
+          part3,
+          total,
+        });
+      }
     }
-  }
 
-  // Official competition rank calculated EXCLUSIVELY from the official Google Sheet
-  const sortedTotals = [...parsedScoresRaw]
-    .map((s) => s.total)
-    .sort((a, b) => b - a);
-  const scores: ScoreRecord[] = parsedScoresRaw.map((s) => ({
-    ...s,
-    rank: sortedTotals.indexOf(s.total) + 1,
-  }));
+    // Official competition rank calculated EXCLUSIVELY from the official Google Sheet
+    const sortedTotals = [...parsedScoresRaw]
+      .map((s) => s.total)
+      .sort((a, b) => b - a);
+    const scores: ScoreRecord[] = parsedScoresRaw.map((s) => ({
+      ...s,
+      rank: sortedTotals.indexOf(s.total) + 1,
+    }));
 
-  // Parse Attendance: Timestamp, Email address, Privacy, Name, Sex, School/Institution, Municipality, Contact Number, Testing Hub
-  const attendance: AttendanceRecord[] = [];
-  if (attendanceRows.length > 1) {
-    const headers = attendanceRows[0].map((h) => h.toLowerCase());
-    const tsIdx = headers.findIndex((h) => h.includes("timestamp"));
-    const emailIdx = headers.findIndex((h) => h.includes("email"));
-    const nameIdx = headers.findIndex((h) => h === "name");
-    const sexIdx = headers.findIndex((h) => h.includes("sex"));
-    const schoolIdx = headers.findIndex((h) => h.includes("school"));
-    const muniIdx = headers.findIndex((h) => h.includes("municipality"));
-    const hubIdx = headers.findIndex((h) => h.includes("testing hub"));
+    // Parse Attendance: Timestamp, Email address, Privacy, Name, Sex, School/Institution, Municipality, Contact Number, Testing Hub
+    const attendance: AttendanceRecord[] = [];
+    if (attendanceRows.length > 1) {
+      const headers = attendanceRows[0].map((h) => h.toLowerCase());
+      const tsIdx = headers.findIndex((h) => h.includes("timestamp"));
+      const emailIdx = headers.findIndex((h) => h.includes("email"));
+      const nameIdx = headers.findIndex((h) => h === "name");
+      const sexIdx = headers.findIndex((h) => h.includes("sex"));
+      const schoolIdx = headers.findIndex((h) => h.includes("school"));
+      const muniIdx = headers.findIndex((h) => h.includes("municipality"));
+      const hubIdx = headers.findIndex((h) => h.includes("testing hub"));
 
-    for (let i = 1; i < attendanceRows.length; i++) {
-      const cols = attendanceRows[i];
-      const email = (cols[emailIdx >= 0 ? emailIdx : 1] ?? "").toLowerCase().trim();
-      const name = cols[nameIdx >= 0 ? nameIdx : 3] ?? "";
-      if (!email || !name) continue;
+      for (let i = 1; i < attendanceRows.length; i++) {
+        const cols = attendanceRows[i];
+        const email = (cols[emailIdx >= 0 ? emailIdx : 1] ?? "").toLowerCase().trim();
+        const name = cols[nameIdx >= 0 ? nameIdx : 3] ?? "";
+        if (!email || !name) continue;
 
+        attendance.push({
+          timestamp: cols[tsIdx >= 0 ? tsIdx : 0] ?? "",
+          email,
+          name,
+          sex: cols[sexIdx >= 0 ? sexIdx : 4] ?? "",
+          school: cols[schoolIdx >= 0 ? schoolIdx : 5] ?? "",
+          municipality: cols[muniIdx >= 0 ? muniIdx : 6] ?? "",
+          testingHub: cols[hubIdx >= 0 ? hubIdx : 8] ?? "",
+        });
+      }
+    }
+
+    // Authorized test examinee for organizer testing.
+    const devEmail = "villaflorjames1468@gmail.com";
+    const devName = "Villaflor, James G.";
+    if (!attendance.some((a) => a.email === devEmail)) {
       attendance.push({
-        timestamp: cols[tsIdx >= 0 ? tsIdx : 0] ?? "",
-        email,
-        name,
-        sex: cols[sexIdx >= 0 ? sexIdx : 4] ?? "",
-        school: cols[schoolIdx >= 0 ? schoolIdx : 5] ?? "",
-        municipality: cols[muniIdx >= 0 ? muniIdx : 6] ?? "",
-        testingHub: cols[hubIdx >= 0 ? hubIdx : 8] ?? "",
+        timestamp: "13/11/2026 14:00:00",
+        email: devEmail,
+        name: devName,
+        sex: "Male",
+        school: "Batangas State University - Alangilan",
+        municipality: "Batangas City",
+        testingHub: "Alangilan - BatStateU Testing Hub (Organizer Test)",
       });
     }
+    if (!scores.some((s) => normalizeName(s.name) === normalizeName(devName))) {
+      scores.push({
+        name: devName,
+        school: "Batangas State University - Alangilan",
+        part1: 42,
+        part2: 55,
+        part3: 51,
+        total: 148,
+        rank: sortedTotals.filter((t) => t > 148).length + 1,
+      });
+    }
+
+    cache = { scores, attendance, fetchedAt: Date.now() };
+  } catch (err) {
+    console.warn("[sheets] Failed to refresh live Google Sheets, continuing with snapshot:", err);
   }
 
-  // Authorized test examinee for organizer testing.
-  // Note: Appended strictly AFTER official ranks are frozen so it NEVER alters any real examinee's rank.
-  const devEmail = "villaflorjames1468@gmail.com";
-  const devName = "Villaflor, James G.";
-  if (!attendance.some((a) => a.email === devEmail)) {
-    attendance.push({
-      timestamp: "13/11/2026 14:00:00",
-      email: devEmail,
-      name: devName,
-      sex: "Male",
-      school: "Batangas State University - Alangilan",
-      municipality: "Batangas City",
-      testingHub: "Alangilan - BatStateU Testing Hub (Organizer Test)",
-    });
-  }
-  if (!scores.some((s) => normalizeName(s.name) === normalizeName(devName))) {
-    scores.push({
-      name: devName,
-      school: "Batangas State University - Alangilan",
-      part1: 42,
-      part2: 55,
-      part3: 51,
-      total: 148,
-      rank: sortedTotals.filter((t) => t > 148).length + 1,
-    });
-  }
-
-  cache = { scores, attendance, fetchedAt: Date.now() };
   return cache;
 }
 

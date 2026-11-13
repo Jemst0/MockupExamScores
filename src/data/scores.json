@@ -1,0 +1,1397 @@
+[
+  {
+    "name": "Simara, Marik Gwyneth D.",
+    "school": "Fame Academy of Science and Technology",
+    "part1": 43,
+    "part2": 58,
+    "part3": 55,
+    "total": 156,
+    "rank": 1
+  },
+  {
+    "name": "Amandy, Zycode Andrei, R.",
+    "school": "Calaca Senior High School",
+    "part1": 42,
+    "part2": 57,
+    "part3": 54,
+    "total": 153,
+    "rank": 2
+  },
+  {
+    "name": "Florentino, Jurhixz F.",
+    "school": "Fame Academy of Science and Technology (FAST) Inc.",
+    "part1": 38,
+    "part2": 57,
+    "part3": 57,
+    "total": 152,
+    "rank": 3
+  },
+  {
+    "name": "Villanueva, Empress Mirabel M.",
+    "school": "Fame Academy of Science and Technology (FAST) Inc.",
+    "part1": 45,
+    "part2": 54,
+    "part3": 48,
+    "total": 147,
+    "rank": 4
+  },
+  {
+    "name": "Bara-acal, Rayan R.",
+    "school": "Lemery Senior High School",
+    "part1": 40,
+    "part2": 53,
+    "part3": 53,
+    "total": 146,
+    "rank": 5
+  },
+  {
+    "name": "Macatangay, Roie Emmanuel B.",
+    "school": "Fame Academy of Science and Technology (FAST) Inc.",
+    "part1": 39,
+    "part2": 54,
+    "part3": 51,
+    "total": 144,
+    "rank": 6
+  },
+  {
+    "name": "Bara-acal, Rihan R.",
+    "school": "Lemery Senior High School",
+    "part1": 40,
+    "part2": 54,
+    "part3": 49,
+    "total": 143,
+    "rank": 7
+  },
+  {
+    "name": "Calapati, Clarence King C.",
+    "school": "Cuenca Senior High School",
+    "part1": 41,
+    "part2": 52,
+    "part3": 49,
+    "total": 142,
+    "rank": 8
+  },
+  {
+    "name": "De Guzman, Patrick Roy P.",
+    "school": "Sto Tomas Senior High School",
+    "part1": 40,
+    "part2": 53,
+    "part3": 48,
+    "total": 141,
+    "rank": 9
+  },
+  {
+    "name": "Silang, Jaden Cazzley P.",
+    "school": "Batangas City Integrated High School",
+    "part1": 41,
+    "part2": 54,
+    "part3": 46,
+    "total": 141,
+    "rank": 9
+  },
+  {
+    "name": "Cornejo, Janelle Ann D.",
+    "school": "Fame Academy of Science and Technology (FAST) Inc.",
+    "part1": 41,
+    "part2": 52,
+    "part3": 47,
+    "total": 140,
+    "rank": 11
+  },
+  {
+    "name": "Ilagan, Cashmere Hugo, G.",
+    "school": "De La Salle Lipa",
+    "part1": 41,
+    "part2": 55,
+    "part3": 44,
+    "total": 140,
+    "rank": 11
+  },
+  {
+    "name": "Villavicencio, Sophia Clarisse A.",
+    "school": "Fame Academy of Science and Technology Inc.",
+    "part1": 39,
+    "part2": 48,
+    "part3": 52,
+    "total": 139,
+    "rank": 13
+  },
+  {
+    "name": "Belo, Zach Angelo M.",
+    "school": "Fame Academy of Science and Technology",
+    "part1": 38,
+    "part2": 55,
+    "part3": 46,
+    "total": 139,
+    "rank": 13
+  },
+  {
+    "name": "Gubi, Alyssa R.",
+    "school": "Lemery Senior High School",
+    "part1": 36,
+    "part2": 56,
+    "part3": 46,
+    "total": 138,
+    "rank": 15
+  },
+  {
+    "name": "Castillo, Alexander M.",
+    "school": "Sto. Tomas Senior High School",
+    "part1": 40,
+    "part2": 53,
+    "part3": 45,
+    "total": 138,
+    "rank": 15
+  },
+  {
+    "name": "Gabinete, Jayron Christian G.",
+    "school": "BATANGAS CITY INTEGRATED HIGH SCHOOL",
+    "part1": 37,
+    "part2": 54,
+    "part3": 47,
+    "total": 138,
+    "rank": 15
+  },
+  {
+    "name": "Encarnacion, Karl Adrian L.",
+    "school": "Fame Academy of Science and Technology",
+    "part1": 37,
+    "part2": 48,
+    "part3": 52,
+    "total": 137,
+    "rank": 18
+  },
+  {
+    "name": "Sarmiento, Vera Sophia M.",
+    "school": "Fame Academy of Science and Technology (FAST)",
+    "part1": 39,
+    "part2": 50,
+    "part3": 47,
+    "total": 136,
+    "rank": 19
+  },
+  {
+    "name": "Catibog, Jandrea Joy P.",
+    "school": "BATANGAS CITY INTEGRATED HIGH SCHOOL",
+    "part1": 39,
+    "part2": 49,
+    "part3": 46,
+    "total": 134,
+    "rank": 20
+  },
+  {
+    "name": "Ilagan, Danica Devine, P.",
+    "school": "Fame Academy of Science and Technology",
+    "part1": 40,
+    "part2": 54,
+    "part3": 39,
+    "total": 133,
+    "rank": 21
+  },
+  {
+    "name": "Cariaga, Jann Carla R.",
+    "school": "Lipa City Science Integrated National High School",
+    "part1": 40,
+    "part2": 49,
+    "part3": 44,
+    "total": 133,
+    "rank": 21
+  },
+  {
+    "name": "Catibog, Janela Anne P.",
+    "school": "Batangas City Integrated High School",
+    "part1": 39,
+    "part2": 51,
+    "part3": 42,
+    "total": 132,
+    "rank": 23
+  },
+  {
+    "name": "Maligaya, Rain ALexis G.",
+    "school": "Fame Academy of Science and Institute",
+    "part1": 33,
+    "part2": 49,
+    "part3": 49,
+    "total": 131,
+    "rank": 24
+  },
+  {
+    "name": "Alamag, Raven Josh B.",
+    "school": "Calaca Senior High School",
+    "part1": 44,
+    "part2": 45,
+    "part3": 41,
+    "total": 130,
+    "rank": 25
+  },
+  {
+    "name": "Maandal, Alesana Jahnylle D.",
+    "school": "Casa del Bambino Emmanuel Montessori",
+    "part1": 38,
+    "part2": 51,
+    "part3": 41,
+    "total": 130,
+    "rank": 25
+  },
+  {
+    "name": "Belo, Jhoana Crystin S.",
+    "school": "Fame Academy of Science and Technology (FAST)",
+    "part1": 39,
+    "part2": 50,
+    "part3": 40,
+    "total": 129,
+    "rank": 27
+  },
+  {
+    "name": "Nohay, Jhoanalie, C.",
+    "school": "Fame Academy of Science and Technology",
+    "part1": 36,
+    "part2": 45,
+    "part3": 46,
+    "total": 127,
+    "rank": 28
+  },
+  {
+    "name": "Andaya, Ashley M.",
+    "school": "Batangas City Integrated High School",
+    "part1": 38,
+    "part2": 46,
+    "part3": 43,
+    "total": 127,
+    "rank": 28
+  },
+  {
+    "name": "Arcay, Alexa Francheska H.",
+    "school": "Fame Academy of Science and Technology (FAST) Inc",
+    "part1": 38,
+    "part2": 45,
+    "part3": 43,
+    "total": 126,
+    "rank": 30
+  },
+  {
+    "name": "Tenorio, Ayesha Faith",
+    "school": "Fame Academy of Science and Technology",
+    "part1": 41,
+    "part2": 45,
+    "part3": 40,
+    "total": 126,
+    "rank": 30
+  },
+  {
+    "name": "Panaligan, Kristine D.",
+    "school": "FAST",
+    "part1": 40,
+    "part2": 52,
+    "part3": 34,
+    "total": 126,
+    "rank": 30
+  },
+  {
+    "name": "Lasic, Lynzey M.",
+    "school": "Mataasnakahoy Senior High School",
+    "part1": 36,
+    "part2": 48,
+    "part3": 42,
+    "total": 126,
+    "rank": 30
+  },
+  {
+    "name": "Atienza, Jairus Johann A.",
+    "school": "Fame Academy of Science and Technology (FAST) Inc.",
+    "part1": 30,
+    "part2": 47,
+    "part3": 48,
+    "total": 125,
+    "rank": 34
+  },
+  {
+    "name": "Perez, Althea Gabrielle T.",
+    "school": "Palahanan Integrated National High School",
+    "part1": 27,
+    "part2": 54,
+    "part3": 44,
+    "total": 125,
+    "rank": 34
+  },
+  {
+    "name": "Cueto, Joseph Louwelle C.",
+    "school": "Fame Academy Of Science and Technology",
+    "part1": 36,
+    "part2": 44,
+    "part3": 44,
+    "total": 124,
+    "rank": 36
+  },
+  {
+    "name": "Abulencia, Raphael Mendel L",
+    "school": "Calaca Senior High School",
+    "part1": 30,
+    "part2": 49,
+    "part3": 42,
+    "total": 121,
+    "rank": 37
+  },
+  {
+    "name": "Lascano, Jilian Lyka M.",
+    "school": "Fame Academy of Science and Technology",
+    "part1": 34,
+    "part2": 45,
+    "part3": 42,
+    "total": 121,
+    "rank": 37
+  },
+  {
+    "name": "Pincaro, Mikaelah Rain F.",
+    "school": "Lemery Senior High School",
+    "part1": 36,
+    "part2": 46,
+    "part3": 39,
+    "total": 121,
+    "rank": 37
+  },
+  {
+    "name": "Comia, Jane Marizet C.",
+    "school": "Calaca Senior High School",
+    "part1": 36,
+    "part2": 57,
+    "part3": 28,
+    "total": 121,
+    "rank": 37
+  },
+  {
+    "name": "Garcia, Kassandra Kim, M.",
+    "school": "Fernando Air Base Integrated National High School",
+    "part1": 37,
+    "part2": 49,
+    "part3": 35,
+    "total": 121,
+    "rank": 37
+  },
+  {
+    "name": "Matalog, Isaiah Gherom E.",
+    "school": "Calaca Senior High School",
+    "part1": 30,
+    "part2": 47,
+    "part3": 43,
+    "total": 120,
+    "rank": 42
+  },
+  {
+    "name": "Almarez, Celine Harriette A.",
+    "school": "Lipa City Science Integrated National High School",
+    "part1": 37,
+    "part2": 42,
+    "part3": 41,
+    "total": 120,
+    "rank": 42
+  },
+  {
+    "name": "Carasucho, Symon Rod C.",
+    "school": "Fame Academy of Science and Technology Inc.",
+    "part1": 32,
+    "part2": 46,
+    "part3": 41,
+    "total": 119,
+    "rank": 44
+  },
+  {
+    "name": "Arcega, Alyssa Nicole B.",
+    "school": "Batangas City Integrated High School",
+    "part1": 40,
+    "part2": 36,
+    "part3": 43,
+    "total": 119,
+    "rank": 44
+  },
+  {
+    "name": "Landig, Justine Andrei O.",
+    "school": "Dr. Juan A. Pastor Integrated National High School",
+    "part1": 34,
+    "part2": 52,
+    "part3": 33,
+    "total": 119,
+    "rank": 44
+  },
+  {
+    "name": "Macuha, Sergio Andres L.",
+    "school": "Dr. Juan A. Pastor Integrated National High School",
+    "part1": 34,
+    "part2": 50,
+    "part3": 35,
+    "total": 119,
+    "rank": 44
+  },
+  {
+    "name": "Villalobos, Nash Jairus A.",
+    "school": "Lemery Senior High School",
+    "part1": 28,
+    "part2": 50,
+    "part3": 40,
+    "total": 118,
+    "rank": 48
+  },
+  {
+    "name": "Rosende, Czarina Mae M.",
+    "school": "Saint Joseph Academy of San Jose, Batangas Incorporated",
+    "part1": 38,
+    "part2": 43,
+    "part3": 37,
+    "total": 118,
+    "rank": 48
+  },
+  {
+    "name": "Mendoza, Chad Lincoln C.",
+    "school": "Fame Academy of Science and Technology (FAST) Inc.",
+    "part1": 34,
+    "part2": 41,
+    "part3": 42,
+    "total": 117,
+    "rank": 50
+  },
+  {
+    "name": "Panton, Janine Kristelle C.",
+    "school": "Fame Academy of Science and Technology (FAST) Inc.",
+    "part1": 39,
+    "part2": 43,
+    "part3": 35,
+    "total": 117,
+    "rank": 50
+  },
+  {
+    "name": "Torres, Irish Chloe M.",
+    "school": "Batangas City Integrated High School",
+    "part1": 36,
+    "part2": 47,
+    "part3": 34,
+    "total": 117,
+    "rank": 50
+  },
+  {
+    "name": "Concel, Sean Zander L.",
+    "school": "Fame Academy of Science and Technology - FAST",
+    "part1": 39,
+    "part2": 35,
+    "part3": 42,
+    "total": 116,
+    "rank": 53
+  },
+  {
+    "name": "Platon, Lyrra D.",
+    "school": "St. Thomas Academy",
+    "part1": 35,
+    "part2": 48,
+    "part3": 33,
+    "total": 116,
+    "rank": 53
+  },
+  {
+    "name": "Catapang, Jhan Irich May Z.",
+    "school": "Batangas City Integrated High School",
+    "part1": 35,
+    "part2": 45,
+    "part3": 36,
+    "total": 116,
+    "rank": 53
+  },
+  {
+    "name": "Marquez, Rikio I.",
+    "school": "Dr. Juan A. Pastor Integrated National High School",
+    "part1": 36,
+    "part2": 51,
+    "part3": 29,
+    "total": 116,
+    "rank": 53
+  },
+  {
+    "name": "Magsino, Trexie Cyrene E.",
+    "school": "Calaca Senior High School",
+    "part1": 38,
+    "part2": 48,
+    "part3": 28,
+    "total": 114,
+    "rank": 57
+  },
+  {
+    "name": "Evangelista, Amanda Margareth O.",
+    "school": "Lipa City Science Integrated National High School",
+    "part1": 35,
+    "part2": 45,
+    "part3": 34,
+    "total": 114,
+    "rank": 57
+  },
+  {
+    "name": "Guce, Rose Ann D.",
+    "school": "Mataasnakahoy Senior High School",
+    "part1": 34,
+    "part2": 49,
+    "part3": 31,
+    "total": 114,
+    "rank": 57
+  },
+  {
+    "name": "Robles, Jeaneth M.",
+    "school": "Cuenca Senior High School",
+    "part1": 34,
+    "part2": 42,
+    "part3": 38,
+    "total": 114,
+    "rank": 57
+  },
+  {
+    "name": "Barrion, Lance Jericho M.",
+    "school": "BAUAN TECHNICAL INTEGRATED HIGH SCHOOL",
+    "part1": 36,
+    "part2": 46,
+    "part3": 31,
+    "total": 113,
+    "rank": 61
+  },
+  {
+    "name": "Cueto, Nicole M.",
+    "school": "Batangas City Integrated High School",
+    "part1": 32,
+    "part2": 44,
+    "part3": 37,
+    "total": 113,
+    "rank": 61
+  },
+  {
+    "name": "Ebora, Ashley Nicole, F.",
+    "school": "Batangas City Integrated High School",
+    "part1": 31,
+    "part2": 48,
+    "part3": 34,
+    "total": 113,
+    "rank": 61
+  },
+  {
+    "name": "Mojares, Marcus Miguel Q.",
+    "school": "Lipa City Science Integrated National High School",
+    "part1": 41,
+    "part2": 34,
+    "part3": 38,
+    "total": 113,
+    "rank": 61
+  },
+  {
+    "name": "Maligaya, Rj D.",
+    "school": "Calaca Senior High School",
+    "part1": 38,
+    "part2": 42,
+    "part3": 32,
+    "total": 112,
+    "rank": 65
+  },
+  {
+    "name": "De Guzman, Venice Andrea",
+    "school": "Dr. Juan A. Pastor Integrated National High School",
+    "part1": 36,
+    "part2": 48,
+    "part3": 28,
+    "total": 112,
+    "rank": 65
+  },
+  {
+    "name": "Surban, Lorenz Adriel P.",
+    "school": "Saint Joseph Academy of San Jose, Batangas, Incorporated",
+    "part1": 35,
+    "part2": 45,
+    "part3": 32,
+    "total": 112,
+    "rank": 65
+  },
+  {
+    "name": "Libera, Fem Moira L.",
+    "school": "Canossa Academy",
+    "part1": 36,
+    "part2": 41,
+    "part3": 34,
+    "total": 111,
+    "rank": 68
+  },
+  {
+    "name": "Menor, Jan Richard L.",
+    "school": "Batangas City Integrated High School",
+    "part1": 33,
+    "part2": 43,
+    "part3": 35,
+    "total": 111,
+    "rank": 68
+  },
+  {
+    "name": "Lovendino, Apple May R.",
+    "school": "Dr. Juan A. Pastor Integrated National High School",
+    "part1": 33,
+    "part2": 43,
+    "part3": 35,
+    "total": 111,
+    "rank": 68
+  },
+  {
+    "name": "De Leon, Valerie R.",
+    "school": "Fame Academy of Science and Technology (FAST)",
+    "part1": 33,
+    "part2": 43,
+    "part3": 34,
+    "total": 110,
+    "rank": 71
+  },
+  {
+    "name": "Casabal, Emilia Pauline C.",
+    "school": "Fame Academy of Science and Technology",
+    "part1": 38,
+    "part2": 43,
+    "part3": 29,
+    "total": 110,
+    "rank": 71
+  },
+  {
+    "name": "Blanco, Ron Ericson C.",
+    "school": "Palahanan Integrated National High School",
+    "part1": 33,
+    "part2": 41,
+    "part3": 36,
+    "total": 110,
+    "rank": 71
+  },
+  {
+    "name": "Dimayuga, Ma. Aubrey Gail O.",
+    "school": "Mataasnakahoy Senior High School",
+    "part1": 32,
+    "part2": 47,
+    "part3": 31,
+    "total": 110,
+    "rank": 71
+  },
+  {
+    "name": "Pasia, Gian R.",
+    "school": "Palahanan Integrated National High School",
+    "part1": 35,
+    "part2": 45,
+    "part3": 30,
+    "total": 110,
+    "rank": 71
+  },
+  {
+    "name": "Mendoza, Althea Mae H.",
+    "school": "Lemery Senior High School",
+    "part1": 34,
+    "part2": 41,
+    "part3": 34,
+    "total": 109,
+    "rank": 76
+  },
+  {
+    "name": "Abel, Amiel Andrei P.",
+    "school": "Dr. Juan A. Pastor Integrated National High School",
+    "part1": 34,
+    "part2": 42,
+    "part3": 33,
+    "total": 109,
+    "rank": 76
+  },
+  {
+    "name": "Calilap, Karl Eiron T.",
+    "school": "Dr. Juan A. Pastor Integrated National High School",
+    "part1": 26,
+    "part2": 43,
+    "part3": 40,
+    "total": 109,
+    "rank": 76
+  },
+  {
+    "name": "Pagkaliwagan, Shane C.",
+    "school": "Rizal College of Taal, Inc.",
+    "part1": 35,
+    "part2": 39,
+    "part3": 34,
+    "total": 108,
+    "rank": 79
+  },
+  {
+    "name": "Figueras, Prince Zildjian S.",
+    "school": "Rizal College of Taal Inc",
+    "part1": 36,
+    "part2": 44,
+    "part3": 28,
+    "total": 108,
+    "rank": 79
+  },
+  {
+    "name": "Manalo, Audrey M.",
+    "school": "Mataasnakahoy Senior High School",
+    "part1": 33,
+    "part2": 49,
+    "part3": 26,
+    "total": 108,
+    "rank": 79
+  },
+  {
+    "name": "Panaligan, Rainier Ghian D.",
+    "school": "Palahanan Integrated National High School",
+    "part1": 31,
+    "part2": 42,
+    "part3": 35,
+    "total": 108,
+    "rank": 79
+  },
+  {
+    "name": "Magtibay, Zian Lauren P.",
+    "school": "Dr. Juan A. Pastor Integrated National High School",
+    "part1": 35,
+    "part2": 42,
+    "part3": 31,
+    "total": 108,
+    "rank": 79
+  },
+  {
+    "name": "Mauhay, Frances Lorraine M.",
+    "school": "Dr. Juan A. Pastor Integrated National High School",
+    "part1": 34,
+    "part2": 47,
+    "part3": 27,
+    "total": 108,
+    "rank": 79
+  },
+  {
+    "name": "Perez, Yosef Yeo P.",
+    "school": "Dr. Juan A. Pastor Integrated National High School",
+    "part1": 33,
+    "part2": 44,
+    "part3": 31,
+    "total": 108,
+    "rank": 79
+  },
+  {
+    "name": "Manalo, Carlyn, A.",
+    "school": "Calaca Senior High School",
+    "part1": 35,
+    "part2": 37,
+    "part3": 34,
+    "total": 106,
+    "rank": 86
+  },
+  {
+    "name": "Manguiat, Marishka Kiely",
+    "school": "Fame Academy of Science and Technology",
+    "part1": 30,
+    "part2": 47,
+    "part3": 29,
+    "total": 106,
+    "rank": 86
+  },
+  {
+    "name": "Untalan, Jona Karla T.",
+    "school": "Dr. Juan A. Pastor Integrated National High School",
+    "part1": 33,
+    "part2": 45,
+    "part3": 28,
+    "total": 106,
+    "rank": 86
+  },
+  {
+    "name": "Orosa, Renzo Kian D.",
+    "school": "Rizal College of Taal Inc.",
+    "part1": 27,
+    "part2": 38,
+    "part3": 40,
+    "total": 105,
+    "rank": 89
+  },
+  {
+    "name": "Gutierrez, Kathleen Yvonne G.",
+    "school": "Palahanan Integrated National High School",
+    "part1": 35,
+    "part2": 50,
+    "part3": 20,
+    "total": 105,
+    "rank": 89
+  },
+  {
+    "name": "Eje, Cassy Rayne C.",
+    "school": "Batangas City Integrated High School",
+    "part1": 38,
+    "part2": 37,
+    "part3": 30,
+    "total": 105,
+    "rank": 89
+  },
+  {
+    "name": "Laylay, Reniel F.",
+    "school": "Calaca Senior High School",
+    "part1": 32,
+    "part2": 37,
+    "part3": 35,
+    "total": 104,
+    "rank": 92
+  },
+  {
+    "name": "Reyes, Anne Carmee Rose M.",
+    "school": "Calaca Senior High School",
+    "part1": 34,
+    "part2": 39,
+    "part3": 31,
+    "total": 104,
+    "rank": 92
+  },
+  {
+    "name": "Brosoto, Kiel Adrian A.",
+    "school": "Lemery Senior High School",
+    "part1": 36,
+    "part2": 40,
+    "part3": 28,
+    "total": 104,
+    "rank": 92
+  },
+  {
+    "name": "Alvis, Dreinz Raiuo D.",
+    "school": "Mataasnakahoy Senior High School",
+    "part1": 31,
+    "part2": 44,
+    "part3": 29,
+    "total": 104,
+    "rank": 92
+  },
+  {
+    "name": "Carreon, Shawn Alexander C.",
+    "school": "Palahan Integrated National High School",
+    "part1": 30,
+    "part2": 42,
+    "part3": 32,
+    "total": 104,
+    "rank": 92
+  },
+  {
+    "name": "Leynes, Christian Andrew K.",
+    "school": "Canossa Academy Lipa Inc.",
+    "part1": 34,
+    "part2": 41,
+    "part3": 29,
+    "total": 104,
+    "rank": 92
+  },
+  {
+    "name": "Manalo, Ian Joshua P.",
+    "school": "Palahanan Integrated National High School",
+    "part1": 32,
+    "part2": 40,
+    "part3": 32,
+    "total": 104,
+    "rank": 92
+  },
+  {
+    "name": "De Villa, Kian Cedric O.",
+    "school": "Lemery Senior High School",
+    "part1": 32,
+    "part2": 41,
+    "part3": 30,
+    "total": 103,
+    "rank": 99
+  },
+  {
+    "name": "Villavicencio, Adrian Keil Martinez",
+    "school": "Fame Academy of Science and Technology (FAST) Inc.",
+    "part1": 38,
+    "part2": 38,
+    "part3": 27,
+    "total": 103,
+    "rank": 99
+  },
+  {
+    "name": "Cresino, Kasmir D.",
+    "school": "Mataasnakahoy Senior High School",
+    "part1": 31,
+    "part2": 43,
+    "part3": 29,
+    "total": 103,
+    "rank": 99
+  },
+  {
+    "name": "Miran, Mica Loraine, N.",
+    "school": "Mataasnakahoy Senior High School",
+    "part1": 34,
+    "part2": 45,
+    "part3": 24,
+    "total": 103,
+    "rank": 99
+  },
+  {
+    "name": "Balmes, Allejah May B.",
+    "school": "Taysan Senior High School",
+    "part1": 30,
+    "part2": 42,
+    "part3": 31,
+    "total": 103,
+    "rank": 99
+  },
+  {
+    "name": "Belino, Alexa Jae A.",
+    "school": "Fame Academy of Science and Technology",
+    "part1": 33,
+    "part2": 40,
+    "part3": 29,
+    "total": 102,
+    "rank": 104
+  },
+  {
+    "name": "Mendoza, Princess Niia H.",
+    "school": "Fame Academy of Science and Technology (FAST) Inc.",
+    "part1": 32,
+    "part2": 37,
+    "part3": 32,
+    "total": 101,
+    "rank": 105
+  },
+  {
+    "name": "Paña, Precious May C.",
+    "school": "Dr. Juan A. Pastor Integrated National High School",
+    "part1": 27,
+    "part2": 41,
+    "part3": 33,
+    "total": 101,
+    "rank": 105
+  },
+  {
+    "name": "Geran, Iya Daryn L.",
+    "school": "Lipa City Science Integrated National High School",
+    "part1": 33,
+    "part2": 40,
+    "part3": 27,
+    "total": 100,
+    "rank": 107
+  },
+  {
+    "name": "Mendoza, Ralph Stephen R.",
+    "school": "Lemery Senior High School",
+    "part1": 29,
+    "part2": 38,
+    "part3": 32,
+    "total": 99,
+    "rank": 108
+  },
+  {
+    "name": "Enriquez, Fionha Charmelle, L.",
+    "school": "Agoncillo Senior High School",
+    "part1": 29,
+    "part2": 43,
+    "part3": 27,
+    "total": 99,
+    "rank": 108
+  },
+  {
+    "name": "Bathan, Rhian Redz Emanuel,Miranda",
+    "school": "Lemery Senior High School",
+    "part1": 32,
+    "part2": 40,
+    "part3": 27,
+    "total": 99,
+    "rank": 108
+  },
+  {
+    "name": "Catapang, Raimie Summer M.",
+    "school": "Rizal College of Taal, INC.",
+    "part1": 36,
+    "part2": 38,
+    "part3": 25,
+    "total": 99,
+    "rank": 108
+  },
+  {
+    "name": "Castillo, Alliah Nicole M.",
+    "school": "Fame Academy of science and technology",
+    "part1": 31,
+    "part2": 38,
+    "part3": 29,
+    "total": 98,
+    "rank": 112
+  },
+  {
+    "name": "Cara, James Asher T.",
+    "school": "Lemery Senior High School",
+    "part1": 36,
+    "part2": 42,
+    "part3": 20,
+    "total": 98,
+    "rank": 112
+  },
+  {
+    "name": "Cayaan, Carmela N.",
+    "school": "Mataasnakahoy Senior High School",
+    "part1": 35,
+    "part2": 37,
+    "part3": 26,
+    "total": 98,
+    "rank": 112
+  },
+  {
+    "name": "Falible, Estrella Andrea, L.",
+    "school": "Sta Clara Integrated National Highschool",
+    "part1": 35,
+    "part2": 37,
+    "part3": 26,
+    "total": 98,
+    "rank": 112
+  },
+  {
+    "name": "Garcia, Homer Jarina",
+    "school": "Palahanan Integrated National High School",
+    "part1": 32,
+    "part2": 37,
+    "part3": 29,
+    "total": 98,
+    "rank": 112
+  },
+  {
+    "name": "Agina, Christel Anne M.",
+    "school": "Bauan Technical Integrated High School",
+    "part1": 35,
+    "part2": 32,
+    "part3": 30,
+    "total": 97,
+    "rank": 117
+  },
+  {
+    "name": "Garcia, Kuchi Bianca F.",
+    "school": "Agoncillo Senior High School",
+    "part1": 35,
+    "part2": 43,
+    "part3": 19,
+    "total": 97,
+    "rank": 117
+  },
+  {
+    "name": "Allinique, Therese Almin A.",
+    "school": "Batangas City Integrated High School",
+    "part1": 32,
+    "part2": 44,
+    "part3": 21,
+    "total": 97,
+    "rank": 117
+  },
+  {
+    "name": "Mendoza, John Loid B.",
+    "school": "Lemery Senior High School",
+    "part1": 37,
+    "part2": 40,
+    "part3": 19,
+    "total": 96,
+    "rank": 120
+  },
+  {
+    "name": "Guadez, Ashley Dinise D.",
+    "school": "PALAHANAN INTEGRATED NATIONAL HIGHSCHOOL",
+    "part1": 30,
+    "part2": 43,
+    "part3": 23,
+    "total": 96,
+    "rank": 120
+  },
+  {
+    "name": "Lumanglas, Mark Gabriel, G.",
+    "school": "Dr. Juan A. Pastor Integrated National High School",
+    "part1": 34,
+    "part2": 36,
+    "part3": 26,
+    "total": 96,
+    "rank": 120
+  },
+  {
+    "name": "Benavides, Raef Stephen S.",
+    "school": "Fame Academy of Science and Technology (FAST) Inc.",
+    "part1": 26,
+    "part2": 38,
+    "part3": 31,
+    "total": 95,
+    "rank": 123
+  },
+  {
+    "name": "Rosales, Czeniah Jhae D.",
+    "school": "Agoncillo Senior High School",
+    "part1": 30,
+    "part2": 38,
+    "part3": 27,
+    "total": 95,
+    "rank": 123
+  },
+  {
+    "name": "Raz, Yhana Nicole V.",
+    "school": "Cuenca Senior High School",
+    "part1": 34,
+    "part2": 37,
+    "part3": 24,
+    "total": 95,
+    "rank": 123
+  },
+  {
+    "name": "Tipan, Fayette Abrienne M.",
+    "school": "Mataasnakahoy Senior High School",
+    "part1": 33,
+    "part2": 40,
+    "part3": 22,
+    "total": 95,
+    "rank": 123
+  },
+  {
+    "name": "De Leon, Arianna A.",
+    "school": "Agoncillo Senior High School",
+    "part1": 28,
+    "part2": 37,
+    "part3": 29,
+    "total": 94,
+    "rank": 127
+  },
+  {
+    "name": "Chicote, Fatima Amielle E.",
+    "school": "Agoncillo Senior High School",
+    "part1": 31,
+    "part2": 35,
+    "part3": 28,
+    "total": 94,
+    "rank": 127
+  },
+  {
+    "name": "Dimayuga, Gian Emmanuel J.",
+    "school": "Mataasnakahoy Senior High School",
+    "part1": 29,
+    "part2": 37,
+    "part3": 28,
+    "total": 94,
+    "rank": 127
+  },
+  {
+    "name": "Apasan, Leares E.",
+    "school": "Dr. Juan A. Pastor Integrated National High School",
+    "part1": 29,
+    "part2": 45,
+    "part3": 20,
+    "total": 94,
+    "rank": 127
+  },
+  {
+    "name": "Untalan, Christian Joseph P.",
+    "school": "Rizal college of Taal Inc.",
+    "part1": 31,
+    "part2": 33,
+    "part3": 29,
+    "total": 93,
+    "rank": 131
+  },
+  {
+    "name": "Papio, Merry Charmelle S.",
+    "school": "Dr. Juan A. Pastor Integrated NHS",
+    "part1": 33,
+    "part2": 38,
+    "part3": 22,
+    "total": 93,
+    "rank": 131
+  },
+  {
+    "name": "ADAN, Chrisma Angelique O.",
+    "school": "Fame Academy of Science and Technology (FAST) Inc.",
+    "part1": 33,
+    "part2": 36,
+    "part3": 23,
+    "total": 92,
+    "rank": 133
+  },
+  {
+    "name": "Buensuceso, Stefanie Joy C.",
+    "school": "Taysan Senior High School",
+    "part1": 26,
+    "part2": 43,
+    "part3": 23,
+    "total": 92,
+    "rank": 133
+  },
+  {
+    "name": "Barte, Jade Cathrise A.",
+    "school": "Dr. Juan A. Pastor Integrated National High School",
+    "part1": 33,
+    "part2": 29,
+    "part3": 30,
+    "total": 92,
+    "rank": 133
+  },
+  {
+    "name": "Perez, Symon A.",
+    "school": "Dr. Juan A. Pastor Integrated National High School",
+    "part1": 28,
+    "part2": 39,
+    "part3": 25,
+    "total": 92,
+    "rank": 133
+  },
+  {
+    "name": "Reyes, Jannah Clarisse Amparo",
+    "school": "Dr. Juan A. Pastor Integrated National High School",
+    "part1": 31,
+    "part2": 40,
+    "part3": 21,
+    "total": 92,
+    "rank": 133
+  },
+  {
+    "name": "Garcia, Princess Fiona Phoebe C.",
+    "school": "Agoncillo Senior High School",
+    "part1": 37,
+    "part2": 36,
+    "part3": 18,
+    "total": 91,
+    "rank": 138
+  },
+  {
+    "name": "Paray, Krysha, M.",
+    "school": "Mataasnakahoy Senior Highschool",
+    "part1": 36,
+    "part2": 37,
+    "part3": 18,
+    "total": 91,
+    "rank": 138
+  },
+  {
+    "name": "Ariola, Queenzel F.",
+    "school": "Agoncillo Senior High School",
+    "part1": 27,
+    "part2": 32,
+    "part3": 30,
+    "total": 89,
+    "rank": 140
+  },
+  {
+    "name": "Salvador, Hanielyn G.",
+    "school": "Batangas City Integrated High School",
+    "part1": 32,
+    "part2": 39,
+    "part3": 18,
+    "total": 89,
+    "rank": 140
+  },
+  {
+    "name": "Tiemsem, Derrick John A.",
+    "school": "Dr. Juan A. Pastor Integrated National High School",
+    "part1": 24,
+    "part2": 39,
+    "part3": 26,
+    "total": 89,
+    "rank": 140
+  },
+  {
+    "name": "Umali, Ram A.",
+    "school": "Lemery Senior High School",
+    "part1": 32,
+    "part2": 31,
+    "part3": 25,
+    "total": 88,
+    "rank": 143
+  },
+  {
+    "name": "Dela Rosa, Kyra Jachel, Domantay",
+    "school": "Fame Academy of Science and Technology (FAST)",
+    "part1": 27,
+    "part2": 37,
+    "part3": 24,
+    "total": 88,
+    "rank": 143
+  },
+  {
+    "name": "Mendoza, Kurt Darylle C.",
+    "school": "Palahanan integrated national high school",
+    "part1": 28,
+    "part2": 38,
+    "part3": 22,
+    "total": 88,
+    "rank": 143
+  },
+  {
+    "name": "Rondina, Lyca C.",
+    "school": "Mataas na Kahoy Senior High School",
+    "part1": 33,
+    "part2": 36,
+    "part3": 19,
+    "total": 88,
+    "rank": 143
+  },
+  {
+    "name": "Macalindong, Jane Frances L.",
+    "school": "Dr. Juan A. Pastor Integrated National High School",
+    "part1": 30,
+    "part2": 34,
+    "part3": 24,
+    "total": 88,
+    "rank": 143
+  },
+  {
+    "name": "Rogando, Anica C.",
+    "school": "Palahanan Integrated National Highschool",
+    "part1": 27,
+    "part2": 33,
+    "part3": 25,
+    "total": 85,
+    "rank": 148
+  },
+  {
+    "name": "Orense, Arriane Joyce A.",
+    "school": "MataasnaKahoy Senior High School",
+    "part1": 27,
+    "part2": 39,
+    "part3": 17,
+    "total": 83,
+    "rank": 149
+  },
+  {
+    "name": "Villapando,Azether Ruth I.",
+    "school": "Alupay Integrated National High School",
+    "part1": 25,
+    "part2": 39,
+    "part3": 18,
+    "total": 82,
+    "rank": 150
+  },
+  {
+    "name": "Caponpon, Gecelle R.",
+    "school": "Dr. Juan A. Pastor Integrated National High School",
+    "part1": 27,
+    "part2": 38,
+    "part3": 16,
+    "total": 81,
+    "rank": 151
+  },
+  {
+    "name": "Cuenca, Kyla Xhyrellene M.",
+    "school": "Palahanan Integrated National High School",
+    "part1": 23,
+    "part2": 39,
+    "part3": 18,
+    "total": 80,
+    "rank": 152
+  },
+  {
+    "name": "Ballinan, Maria Tiffanie M.",
+    "school": "Lipa City Science Integrated National High School",
+    "part1": 20,
+    "part2": 39,
+    "part3": 20,
+    "total": 79,
+    "rank": 153
+  },
+  {
+    "name": "Garing, Alexis Chloe, N.",
+    "school": "Agoncillo Senior High School",
+    "part1": 24,
+    "part2": 36,
+    "part3": 18,
+    "total": 78,
+    "rank": 154
+  },
+  {
+    "name": "Cafe, Rona Rain S.",
+    "school": "Agoncillo Senior High School",
+    "part1": 25,
+    "part2": 38,
+    "part3": 15,
+    "total": 78,
+    "rank": 154
+  }
+]
