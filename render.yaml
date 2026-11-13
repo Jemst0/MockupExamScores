@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: askbok-score-checker
+    runtime: node
+    plan: free
+    region: singapore # Closest region to the Philippines
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SMTP_HOST
+        value: smtp.gmail.com
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_SECURE
+        value: "false"
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: SMTP_FROM
+        value: "ASKBOK Score Checker <villaflorjames1468@gmail.com>"
+      - key: OTP_SECRET
+        generateValue: true
