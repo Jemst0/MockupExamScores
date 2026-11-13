@@ -1,4 +1,4 @@
-import nodemailer from "nodemailer";
+import nodemailer, { Transporter } from "nodemailer";
 
 export interface SendOtpResult {
   sent: boolean;
@@ -8,6 +8,38 @@ export interface SendOtpResult {
 
 export function isSmtpConfigured(): boolean {
   return Boolean(process.env.SMTP_USER && process.env.SMTP_PASS);
+}
+
+const globalForMailer = globalThis as unknown as {
+  __askbokTransporter?: Transporter;
+};
+
+function getTransporter(): Transporter {
+  if (globalForMailer.__askbokTransporter) {
+    return globalForMailer.__askbokTransporter;
+  }
+
+  const host = process.env.SMTP_HOST || "smtp.gmail.com";
+  const port = Number.parseInt(process.env.SMTP_PORT || "587", 10);
+  const secure = process.env.SMTP_SECURE === "true" || port === 465;
+  const user = process.env.SMTP_USER?.trim();
+  const pass = process.env.SMTP_PASS?.replace(/\s+/g, "");
+
+  const transporter = nodemailer.createTransport({
+    host,
+    port,
+    secure,
+    pool: true, // Reuse connections for high-concurrency requests
+    maxConnections: 3, // Prevent triggering Gmail concurrent connection limits
+    maxMessages: 100, // Recycle after 100 messages
+    auth: {
+      user,
+      pass,
+    },
+  });
+
+  globalForMailer.__askbokTransporter = transporter;
+  return transporter;
 }
 
 export async function sendOtpEmail(
@@ -33,19 +65,7 @@ export async function sendOtpEmail(
     };
   }
 
-  const host = process.env.SMTP_HOST || "smtp.gmail.com";
-  const port = Number.parseInt(process.env.SMTP_PORT || "587", 10);
-  const secure = process.env.SMTP_SECURE === "true" || port === 465;
-
-  const transporter = nodemailer.createTransport({
-    host,
-    port,
-    secure,
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
-    },
-  });
+  const transporter = getTransporter();
 
   const fromAddress =
     process.env.SMTP_FROM || `"ASKBOK Score Checker" <${process.env.SMTP_USER}>`;
