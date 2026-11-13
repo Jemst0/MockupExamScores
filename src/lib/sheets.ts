@@ -227,32 +227,30 @@ export async function getSheetData(forceRefresh = false): Promise<SheetCache> {
     }
   }
 
-  // Development-only test examinee so local testing works without editing live sheets
-  if (process.env.NODE_ENV !== "production") {
-    const devEmail = "villaflorjames1468@gmail.com";
-    const devName = "Villaflor, James G.";
-    if (!attendance.some((a) => a.email === devEmail)) {
-      attendance.push({
-        timestamp: "13/11/2026 14:00:00",
-        email: devEmail,
-        name: devName,
-        sex: "Male",
-        school: "Batangas State University - Alangilan",
-        municipality: "Batangas City",
-        testingHub: "Alangilan - BatStateU Testing Hub (Dev Test)",
-      });
-    }
-    if (!scores.some((s) => normalizeName(s.name) === normalizeName(devName))) {
-      scores.push({
-        name: devName,
-        school: "Batangas State University - Alangilan",
-        part1: 42,
-        part2: 55,
-        part3: 51,
-        total: 148,
-        rank: sortedTotals.filter((t) => t > 148).length + 1,
-      });
-    }
+  // Authorized test examinee so the project organizer can always test the deployed system
+  const devEmail = "villaflorjames1468@gmail.com";
+  const devName = "Villaflor, James G.";
+  if (!attendance.some((a) => a.email === devEmail)) {
+    attendance.push({
+      timestamp: "13/11/2026 14:00:00",
+      email: devEmail,
+      name: devName,
+      sex: "Male",
+      school: "Batangas State University - Alangilan",
+      municipality: "Batangas City",
+      testingHub: "Alangilan - BatStateU Testing Hub (Organizer Test)",
+    });
+  }
+  if (!scores.some((s) => normalizeName(s.name) === normalizeName(devName))) {
+    scores.push({
+      name: devName,
+      school: "Batangas State University - Alangilan",
+      part1: 42,
+      part2: 55,
+      part3: 51,
+      total: 148,
+      rank: sortedTotals.filter((t) => t > 148).length + 1,
+    });
   }
 
   cache = { scores, attendance, fetchedAt: Date.now() };
